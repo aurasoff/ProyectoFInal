@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="289.0" prefWidth="520.0" style="-fx-background-color: #fffff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.controlador.ReporteFinanciero">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="79.0" prefWidth="520.0" style="-fx-background-color: #FFFFFF;">
+            <children>
+                <Label layoutX="185.0" layoutY="40.0" text="Reporte Financiero" textAlignment="CENTER">
+                    <font>
+                        <Font name="Apple Braille" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="185.0" layoutY="39.0" textAlignment="CENTER">
+            <font>
+                <Font name="Apple Braille" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnGenerarReporte" layoutX="308.0" layoutY="159.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #2e5740;" text="Generer Reporte" textFill="WHITE" />
+        <Button fx:id="btnCancelarReporte" layoutX="77.0" layoutY="202.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="135.0" style="-fx-background-color: #AD2A2A;" text="Cancelar Reporte" textFill="WHITE" />
+    </children>
+</AnchorPane>
