@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="783.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.controlador.RegistrarEmpleadoCont">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="82.0" prefWidth="587.0" style="-fx-background-color: #455e39;">
+            <children>
+                <Label layoutX="187.0" layoutY="36.0" text="Registro de Empleado" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Apple Braille" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="47.0" layoutY="117.0" text="Nombre" />
+        <TextField fx:id="txtNombreEmpleado" layoutX="135.0" layoutY="113.0" prefHeight="25.0" prefWidth="366.0" />
+        <Label layoutX="45.0" layoutY="182.0" text="Apellido">
+            <font>
+                <Font name="Apple Braille" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtApellidoEmpleado" layoutX="135.0" layoutY="179.0" prefHeight="25.0" prefWidth="366.0" />
+        <Label layoutX="7.0" layoutY="222.0" prefHeight="19.0" prefWidth="108.0" text="Correo Electronico">
+            <font>
+                <Font name="Apple Braille" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtCorreoEmpleado" layoutX="135.0" layoutY="219.0" prefHeight="25.0" prefWidth="366.0" />
+        <Label layoutX="38.0" layoutY="274.0" text="Telefono" />
+        <TextField fx:id="txtTelefonoEmpleado" layoutX="135.0" layoutY="270.0" prefHeight="25.0" prefWidth="366.0" />
+        <Label layoutX="59.0" layoutY="321.0" text="C.C." />
+        <TextField fx:id="txtCCEmpleado" layoutX="135.0" layoutY="317.0" prefHeight="25.0" prefWidth="366.0" />
+        <Button fx:id="btnRegistrarEmpleado" layoutX="378.0" layoutY="548.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="142.0" style="-fx-background-color: #5fbc7e;" text="Registrar" textFill="WHITE" />
+        <Label layoutX="49.0" layoutY="422.0" text="Usuario" />
+        <TextField fx:id="txtUsuarioEmpleado" layoutX="135.0" layoutY="418.0" prefHeight="25.0" prefWidth="366.0" promptText="Ingrese un nombre de usuario" />
+        <Label layoutX="27.0" layoutY="472.0" text="Clave de acceso" />
+        <Label layoutX="42.0" layoutY="372.0" text="Direccion">
+            <font>
+                <Font name="Apple Braille" size="13.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtDireccionEmpleado" layoutX="135.0" layoutY="369.0" prefHeight="25.0" prefWidth="366.0" promptText="Ingrese la dirección" />
+        <Button fx:id="btnCancelarRegistroEmpleado" layoutX="69.0" layoutY="548.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="142.0" style="-fx-background-color: #AD2A2A;" text="Cancelar Registro" textFill="WHITE" />
+
+        <PasswordField fx:id="txtClaveDeEmpleado" layoutX="135.0" layoutY="467.0" prefHeight="26.0" prefWidth="366.0" promptText="Cree Una Clave de Empleado" />
+    </children>
+</AnchorPane>

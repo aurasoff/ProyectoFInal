@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.banco.controlador.GestionmpleadosControlador">
+    <children>
+        <AnchorPane layoutY="-4.0" prefHeight="94.0" prefWidth="558.0" style="-fx-background-color: #455e39;">
+            <children>
+                <ImageView fx:id="imgLogo" fitHeight="94.0" fitWidth="113.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                    </image>
+                </ImageView>
+                <Label layoutX="187.0" layoutY="36.0" text="Gestion de Empleados" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Apple Braille" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Button fx:id="btnEliminarEmpleado" layoutX="19.0" layoutY="334.0" mnemonicParsing="false" onAction="#eliminarEmpleado" prefHeight="26.0" prefWidth="122.0" style="-fx-background-color: #94dc96;" text="Eliminar Empleado" textFill="#030101" />
+        <TableView fx:id="TablaDatosEmpleados" layoutX="19.0" layoutY="115.0" prefHeight="200.0" prefWidth="484.0">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="colIdentificacion" prefWidth="99.19136047363281" text="Identificacion" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnEditarEmpleado" layoutX="189.0" layoutY="334.0" mnemonicParsing="false" onAction="#editarEmpleado" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: #94dc96;" text="Editar Empleado" />
+        <Button fx:id="btnAgregarNuevoEmpleado" layoutX="349.0" layoutY="334.0" mnemonicParsing="false" onAction="#agregarNuevoEmpleado" prefHeight="26.0" prefWidth="164.0" style="-fx-background-color: #94dc96;" text="Registrar Empleado" />
+        <Button fx:id="btnCancelarGestion" layoutX="8.0" layoutY="512.0" mnemonicParsing="false" onAction="#cancelarGestion" prefHeight="26.0" prefWidth="142.0" style="-fx-background-color: #AD2A2A;" text="Regresar" textFill="WHITE" />
+    </children>
+</AnchorPane>

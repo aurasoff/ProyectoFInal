@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import lombok.Setter;
 
 /**
- * @author juand
+ * @author Auraaa
  */
 public class RecargaControlador {
     private Banco banco;

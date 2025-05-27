@@ -81,6 +81,7 @@ public class LoginAdminControlador {
     }
 
     public void mostrarNuevaCuenta(ActionEvent actionEvent) {
+        navegarVentana("/registrarEmpleado.fxml", "Banco - Gestion Empleados");
     }
 
     public void BuscarUsuario(ActionEvent actionEvent) {

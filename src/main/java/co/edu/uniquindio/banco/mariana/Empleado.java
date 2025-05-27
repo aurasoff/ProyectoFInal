@@ -5,7 +5,7 @@ public abstract class Empleado extends Persona{
     private String cargo;  // Ejemplo: "Cajero", "Administrador"
     private String contrasena; // Para autenticación interna
     public Empleado(String nombre, String cedula, String correo, String telefono, String direccion,
-                    String codigoEmpleado, String cargo, String contrasena) {
+                    String codigoEmpleado, String cargo) {
         super(nombre, cedula, correo, telefono, direccion);
         this.codigoEmpleado = codigoEmpleado;
         this.cargo = cargo;

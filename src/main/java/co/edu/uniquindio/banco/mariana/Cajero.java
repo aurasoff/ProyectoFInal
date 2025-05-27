@@ -8,9 +8,12 @@ public class Cajero extends Empleado implements IValidarDatos{
 
     private List<Transaccion> transaccionesRegistradas;
     private List<Cliente> clientesRegistrados;
+    private List<Empleado> empleados = new ArrayList<>();
+    private Administrador administradorActual;
 
-    public Cajero(String nombre, String cedula, String correo, String telefono, String direccion, String codigoEmpleado, String cargo, String contrasena) {
-        super(nombre,cedula,correo,telefono,direccion, codigoEmpleado, cargo, contrasena);
+
+    public Cajero(String nombre, String cedula, String correo, String telefono, String direccion, String codigoEmpleado, String contrasena) {
+        super(nombre,cedula,correo,telefono,direccion, codigoEmpleado, contrasena);
         this.transaccionesRegistradas = new ArrayList<>();
         this.clientesRegistrados= new ArrayList<>();
     }
@@ -108,5 +111,55 @@ public class Cajero extends Empleado implements IValidarDatos{
         }
         return true;
     }
+    public List<Empleado> listarEmpleados() {
+        return new ArrayList<>(empleados); // Copia para evitar modificación externa
+    }
+    public Cajero registrarCajero(String nombre, String cedula, String correo, String telefono,
+                                  String direccion, String codigoEmpleado, String cargo, String contrasena) {
+
+        for (Empleado emp : empleados) {
+            if (emp.getCedula().equals(cedula)) {
+                System.out.println("Ya existe un empleado con esa cédula.");
+                return null;
+            }
+        }
+
+        Cajero nuevo = new Cajero(nombre, cedula, correo, telefono, direccion, codigoEmpleado, contrasena);
+        empleados.add(nuevo);
+        return nuevo;
+    }
+    public Empleado obtenerEmpleadoPorCedula(String cedula) {
+        for (Empleado emp : empleados) {
+            if (emp.getCedula().equals(cedula)) {
+                return emp;
+            }
+        }
+        return null;
+    }
+    public boolean actualizarEmpleado(String cedula, String nuevoCorreo, String nuevoTelefono, String nuevaDireccion) {
+        Empleado emp = obtenerEmpleadoPorCedula(cedula);
+        if (emp != null) {
+            emp.setCorreo(nuevoCorreo);
+            emp.setTelefono(nuevoTelefono);
+            emp.setDireccion(nuevaDireccion);
+            return true;
+        }
+        return false;
+    }
+    public boolean eliminarEmpleado(String cedula) {
+        Empleado emp = obtenerEmpleadoPorCedula(cedula);
+        if (emp != null) {
+            empleados.remove(emp);
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+
+
+
 
 }

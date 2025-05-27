@@ -15,7 +15,8 @@ import java.util.ResourceBundle;
 import javafx.stage.Stage;
 
 public class CajeroControlador {
-        private Cliente cliente;
+    public Button btnSalir;
+    private Cliente cliente;
         private BancoU banco;
 
 
@@ -87,12 +88,18 @@ public class CajeroControlador {
 }
 
     public void salir(ActionEvent actionEvent) {
+            navegarVentana("/inicio.fxml", "Banco");
+            cerrarVentana();
     }
 
     public void hacerTransaccion(ActionEvent actionEvent) {
         navegarVentana("/transferencia.fxml", "Banco - Registrarse");
 
 
+    }
+    public void cerrarVentana(){
+        Stage stage = (Stage) btnSalir.getScene().getWindow();
+        stage.close();
     }
 }
 

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @author juand
+ * @author aura
  */
 public class Sesion {
 

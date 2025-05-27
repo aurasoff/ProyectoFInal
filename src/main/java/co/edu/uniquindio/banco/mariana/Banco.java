@@ -14,6 +14,7 @@ public class Banco {
     private List<CuentaBancaria> cuentas;
     private List<Transaccion> transacciones;
     private List<Reporte> reportes;
+    private List<Empleado> empleados;
 
     public Banco(String nombre, String nit, String direccion) {
         this.nombre = nombre;
@@ -23,6 +24,7 @@ public class Banco {
         this.cuentas = new ArrayList<>();
         this.transacciones = new ArrayList<>();
         this.reportes = new ArrayList<>();
+        this.empleados=new ArrayList<>();
     }
 
     // Getters básicos
@@ -33,6 +35,7 @@ public class Banco {
     public List<CuentaBancaria> getCuentas() { return cuentas; }
     public List<Transaccion> getTransacciones() { return transacciones; }
     public List<Reporte> getReportes() { return reportes; }
+    public List<Empleado> getEmpleado(){return empleados;}
 
     // Registro y búsqueda de personas
     public void registrarPersona(Persona persona) throws Exception {
@@ -157,4 +160,14 @@ public class Banco {
         }
         return null;
     }
+    public boolean eliminarEmpleado(String cedula) {
+        for (Empleado emp : empleados) {
+            if (emp.getCedula().equals(cedula)) {
+                empleados.remove(emp);
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
