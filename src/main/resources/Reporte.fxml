@@ -8,9 +8,9 @@
     <children>
         <AnchorPane layoutY="-1.0" prefHeight="79.0" prefWidth="520.0" style="-fx-background-color: #FFFFFF;">
             <children>
-                <Label layoutX="185.0" layoutY="40.0" text="Reporte Financiero" textAlignment="CENTER">
+                <Label layoutX="178.0" layoutY="22.0" text="REPORTES" textAlignment="CENTER">
                     <font>
-                        <Font name="Apple Braille" size="18.0" />
+                        <Font size="22.0" />
                     </font>
                 </Label>
             </children>
@@ -20,7 +20,7 @@
                 <Font name="Apple Braille" size="18.0" />
             </font>
         </Label>
-        <Button fx:id="btnGenerarReporte" layoutX="308.0" layoutY="159.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" style="-fx-background-color: #2e5740;" text="Generer Reporte" textFill="WHITE" />
-        <Button fx:id="btnCancelarReporte" layoutX="77.0" layoutY="202.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="135.0" style="-fx-background-color: #AD2A2A;" text="Cancelar Reporte" textFill="WHITE" />
+        <Button fx:id="btnGenerarReporte" layoutX="299.0" layoutY="144.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="135.0" style="-fx-background-color: #2e5740;" text="Generer Reporte" textFill="WHITE" />
+        <Button fx:id="btnCancelarReporte" layoutX="49.0" layoutY="145.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="135.0" style="-fx-background-color: #AD2A2A;" text="Cancelar Reporte" textFill="WHITE" />
     </children>
 </AnchorPane>
