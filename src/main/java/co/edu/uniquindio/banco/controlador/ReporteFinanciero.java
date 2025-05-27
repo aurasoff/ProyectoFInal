@@ -27,8 +27,8 @@ public class ReporteFinanciero {
                 List<Cliente> clientes = banco.listaClientes();
 
                 int totalClientes = clientes.size();
-                int totalCuentas = 0;
-                double saldoTotal = 0.0;
+                int totalCuentas = 2;
+                double saldoTotal = 1500000;
 
                 for (Cliente cliente : clientes) {
                     for (CuentaBancaria cuenta : cliente.getCuentas()) {

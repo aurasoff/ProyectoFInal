@@ -1,7 +1,7 @@
 package co.edu.uniquindio.banco.controlador;
 
 import co.edu.uniquindio.banco.Model.BancoU;
-import co.edu.uniquindio.banco.Model.Cliente;
+import co.edu.uniquindio.banco.mariana.Cliente;
 import co.edu.uniquindio.banco.modelo.entidades.Banco;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -12,8 +12,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class LoginAdminControlador {
@@ -59,6 +61,7 @@ public class LoginAdminControlador {
     @FXML
     public void initialize() {
         initDataBinding();
+        tablaClientes();
 
 
 
@@ -69,8 +72,14 @@ public class LoginAdminControlador {
         String textoBuscar = txtbuscar.getText().toLowerCase();
         bancoU.buscarCuenta(textoBuscar);
     }
+    @FXML
+    public void irbuscar(ActionEvent event) {
+
+    }
+    @FXML
+
     private void initDataBinding() {
-        colID.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getId()));
+        colID.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCedula()));
         colNombres.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNombre()));
         // Usamos SimpleObjectProperty para manejar Double y Integer correctamente
     }
@@ -112,5 +121,20 @@ public class LoginAdminControlador {
     public void cerrarVentana(){
         Stage stage = (Stage) btnRegresar.getScene().getWindow();
         stage.close();
+    }
+
+    public void tablaClientes() {
+
+            List<Cliente> listay = banco.listaClientes();
+            System.out.println("Clientes encontrados: " + listay.size());
+
+            ObservableList<Cliente> clientes = FXCollections.observableArrayList(listay);
+
+            colID.setCellValueFactory(new PropertyValueFactory<>("cedula"));  // Usa los nombres correctos
+            colNombres.setCellValueFactory(new PropertyValueFactory<>("nombre"));
+            colCorreo.setCellValueFactory(new PropertyValueFactory<>("email"));
+
+            tableClientes.setItems(clientes);
+
     }
 }

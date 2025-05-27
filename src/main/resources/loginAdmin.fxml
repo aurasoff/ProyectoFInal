@@ -17,7 +17,7 @@
                 <Label layoutX="148.0" layoutY="83.0" text=" Listado de clientes registrados en el banco. Seleccione un cliente de la lista para realizar una acción." textFill="WHITE" />
             </children>
         </Pane>
-        <TableView fx:id="tableClientes" layoutX="32.0" layoutY="127.0" prefHeight="218.0" prefWidth="805.0" style="-fx-background-color: #aaaaa; -fx-border-color: #2ECC71; -fx-border-width: 2; -fx-table-cell-border-color: transparent;">
+        <TableView fx:id="tableClientes" layoutX="32.0" layoutY="127.0" onSort="#tablaClientes" prefHeight="218.0" prefWidth="805.0" style="-fx-background-color: #aaaaa; -fx-border-color: #2ECC71; -fx-border-width: 2; -fx-table-cell-border-color: transparent;">
             <columns>
                 <TableColumn fx:id="colID" prefWidth="202.4" text="Identificacion" />
                 <TableColumn fx:id="colNombres" prefWidth="271.2" text="Nombre" />
