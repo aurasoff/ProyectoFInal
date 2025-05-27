@@ -1,5 +1,5 @@
 package co.edu.uniquindio.banco.modelo.enums;
 
 public enum Categoria {
-    ALIMENTOS, TRANSPORTE, SALUD, EDUCACION, ENTRETENIMIENTO, RECARGA, OTROS
+    AHORRRO, EMPRESARIAL, CORRIENTE,RECARGA
 }

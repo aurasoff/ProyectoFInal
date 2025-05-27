@@ -288,7 +288,10 @@ public class Banco {
         return null;
     }
 
+    private List<Cliente> clientes = new ArrayList<>();
+
     public List<Cliente> listaClientes() {
-        return new ArrayList<>();
+        return clientes;
     }
+
 }

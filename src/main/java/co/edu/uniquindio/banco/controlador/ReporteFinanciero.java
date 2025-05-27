@@ -38,7 +38,7 @@ public class ReporteFinanciero {
                 }
 
                 String reporte = String.format("""
-                    📊 REPORTE FINANCIERO 📊
+                    REPORTE :
 
                     Total de clientes registrados: %d
                     Total de cuentas activas: %d

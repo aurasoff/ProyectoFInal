@@ -1,5 +1,8 @@
 package co.edu.uniquindio.banco;
 
+import co.edu.uniquindio.banco.controlador.ReporteFinanciero;
+import co.edu.uniquindio.banco.mariana.Cliente;
+import co.edu.uniquindio.banco.mariana.CuentaBancaria;
 import co.edu.uniquindio.banco.modelo.entidades.Banco;
 import co.edu.uniquindio.banco.modelo.entidades.Usuario;
 import javafx.application.Application;
@@ -7,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import co.edu.uniquindio.banco.mariana.Cliente;
 
 
 public class BancoApp extends Application {
